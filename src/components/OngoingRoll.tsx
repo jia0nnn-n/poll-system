@@ -18,7 +18,11 @@ export const OngoinPoll = memo<OngoinPollProps>(function Poll(props) {
 
   return (
     <div id="ongoing-root">
-      <h2>{poll.title}</h2>
+      <h2 id="ongoing-phone-mode-header">{poll.title}</h2>
+      <div id="ongoing-desktop-mode-header">
+        <h1>{poll.title}</h1>
+        <p>{poll.time}</p>
+      </div>
       <div id="onging-wrapper">
         <div id="onging-wrapper-actions">
           <Button
