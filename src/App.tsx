@@ -2,16 +2,36 @@ import { useState } from "react";
 import "./App.css";
 import { OngoinPoll } from "./components/OngoingRoll";
 import { PreviewRoll } from "./components/PreviewRoll";
-import data from "./database.json";
+import defaultData from "./database.json";
+import { Poll } from "./PollType";
 
 function App() {
-  const { polls } = data;
+  const { polls } = defaultData;
+  const [data, setData] = useState<Poll[]>(polls);
   const [selectedPoll, setSelectedPoll] = useState(polls[0]);
+
+  const handleDataChange = (id: number, yes: number, no: number) => {
+    setData((state) => {
+      const changingItem = state.find((p) => p.id === id);
+      if (changingItem) {
+        changingItem.data[0].value = yes;
+        changingItem.data[1].value = no;
+        return [...state];
+      }
+      return state;
+    });
+  };
+  
   return (
     <div className="App">
-      <OngoinPoll poll={selectedPoll} chartHeight={200} chartWidth={400} />
+      <OngoinPoll
+        poll={selectedPoll}
+        chartHeight={200}
+        chartWidth={400}
+        voteFn={handleDataChange}
+      />
       <div id="preview-root">
-        {polls.map((poll, index) => (
+        {data.map((poll, index) => (
           <PreviewRoll
             key={index}
             poll={poll}
