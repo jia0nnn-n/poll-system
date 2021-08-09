@@ -9,7 +9,7 @@ function App() {
   const [selectedPoll, setSelectedPoll] = useState(polls[0]);
   return (
     <div className="App">
-      <OngoinPoll poll={selectedPoll} />
+      <OngoinPoll poll={selectedPoll} chartHeight={200} chartWidth={400} />
       <div id="preview-root">
         {polls.map((poll, index) => (
           <PreviewRoll
