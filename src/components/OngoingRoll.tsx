@@ -1,10 +1,10 @@
 import React, { memo } from "react";
+import { Poll } from "../PollType";
 
-export const OngoinPoll = memo(function OngoinPoll(props) {
+type OngoinPollProps = {
+  poll: Poll;
+};
 
-  return (
-    <div id="ongoing-root">
-     OngoinPoll components
-    </div>
-  );
+export const OngoinPoll = memo<OngoinPollProps>(function OngoinPoll(props) {
+  return <div id="ongoing-root">{props.poll.title}</div>;
 });
