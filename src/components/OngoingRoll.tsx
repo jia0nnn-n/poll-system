@@ -11,10 +11,16 @@ type OngoinPollProps = {
 };
 
 export const OngoinPoll = memo<OngoinPollProps>(function Poll(props) {
-  if (!props.poll || props.poll.data?.length < 2) return null;
+  if (!props.poll || props.poll.data?.length < 2)
+    return (
+      <h3>
+        Some problems here. Try later. The polling may have been ended. Try
+        another one!
+      </h3>
+    );
   const { poll, chartWidth, chartHeight, voteFn } = props;
   // FIXED: chart updating doesn't work (FXIED by return new array)
-  const data = poll.data.map((d) => d);
+  const data = poll.data.map((datum) => datum);
 
   return (
     <div id="ongoing-root">
