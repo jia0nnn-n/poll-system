@@ -59,7 +59,7 @@ export const OngoinPoll = memo<OngoinPollProps>(function Poll(props) {
           </PieChart>
         </div>
       </div>
-      <p id="ongoing-result">
+      <p id="ongoing-result" data-testid="test-ongoing-result">
         Total number of votes records: {data[0].value + data[1].value}
       </p>
     </div>

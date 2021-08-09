@@ -15,7 +15,11 @@ export const PreviewRoll = memo<PreviewPollProps>(function PreviewRoll(props) {
     { name: "no", value: 50 },
   ];
   return (
-    <div className="preview-item" onClick={() => toOngoingPollFn(poll)}>
+    <div
+      className="preview-item"
+      onClick={() => toOngoingPollFn(poll)}
+      data-testid="test-preview-item"
+    >
       <div className="preview-item-chart">
         <PieChart width={160} height={160}>
           <Pie
