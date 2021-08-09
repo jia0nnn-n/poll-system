@@ -1,0 +1,49 @@
+{
+  "polls": [
+    {
+      "title": "Is bitcoin worth the time and money that mining requires?",
+      "time": "17 JAN 2018",
+      "id": 1001,
+      "data": [
+        { "name": "yes", "value": 10 },
+        { "name": "no", "value": 10 }
+      ]
+    },
+    {
+      "title": "Should chatbots replace humans in customer service jobs?",
+      "time": "15 JAN 2018",
+      "id": 1002,
+      "data": [
+        { "name": "yes", "value": 91 },
+        { "name": "no", "value": 1000 }
+      ]
+    },
+    {
+      "title": "Will the economies of Shenzhen and Guangzhou overtake Hong...",
+      "time": "12 JAN 2018",
+      "id": 1003,
+      "data": [
+        { "name": "yes", "value": 91 },
+        { "name": "no", "value": 91 }
+      ]
+    },
+    {
+      "title": "Will new benefits encoursage you to study or work in mainland?",
+      "time": "10 JAN 2018",
+      "id": 1004,
+      "data": [
+        { "name": "yes", "value": 91 },
+        { "name": "no", "value": 91 }
+      ]
+    },
+    {
+      "title": "Should police officers be exempt from criminal liability at work?",
+      "time": "9 JAN 2018",
+      "id": 1005,
+      "data": [
+        { "name": "yes", "value": 91 },
+        { "name": "no", "value": 91 }
+      ]
+    }
+  ]
+}
