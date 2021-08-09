@@ -31,13 +31,15 @@ function App() {
         voteFn={handleDataChange}
       />
       <div id="preview-root">
-        {data.map((poll, index) => (
-          <PreviewRoll
-            key={index}
-            poll={poll}
-            toOngoingPollFn={setSelectedPoll}
-          />
-        ))}
+        {data.map((poll, index) =>
+          selectedPoll.id === poll.id ? null : (
+            <PreviewRoll
+              key={index}
+              poll={poll}
+              toOngoingPollFn={setSelectedPoll}
+            />
+          )
+        )}
       </div>
     </div>
   );
