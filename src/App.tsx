@@ -21,13 +21,13 @@ function App() {
       return state;
     });
   };
-  
+
   return (
     <div className="App">
       <OngoinPoll
         poll={selectedPoll}
-        chartHeight={200}
-        chartWidth={400}
+        chartHeight={180}
+        chartWidth={360}
         voteFn={handleDataChange}
       />
       <div id="preview-root">
