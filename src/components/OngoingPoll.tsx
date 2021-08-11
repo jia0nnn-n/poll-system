@@ -3,14 +3,14 @@ import { memo } from "react";
 import { Cell, PieChart, Pie, Tooltip } from "recharts";
 import { Poll } from "../PollType";
 
-type OngoinPollProps = {
+type OngoingPollProps = {
   poll: Poll;
   chartWidth: number;
   chartHeight: number;
   voteFn: (id: number, yes: number, no: number) => void;
 };
 
-export const OngoinPoll = memo<OngoinPollProps>(function Poll(props) {
+export const OngoinPoll = memo<OngoingPollProps>(function Poll(props) {
   if (!props.poll || props.poll.data?.length < 2)
     return (
       <h3>

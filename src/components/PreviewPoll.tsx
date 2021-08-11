@@ -7,7 +7,7 @@ type PreviewPollProps = {
   toOngoingPollFn: React.Dispatch<React.SetStateAction<Poll>>;
 };
 
-export const PreviewRoll = memo<PreviewPollProps>(function PreviewRoll(props) {
+export const PreviewPoll = memo<PreviewPollProps>(function PreviewPoll(props) {
   const { poll, toOngoingPollFn } = props;
   // just for preview, use this mock data
   const mockData = [

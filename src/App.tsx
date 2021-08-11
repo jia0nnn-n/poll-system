@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import { OngoinPoll } from "./components/OngoingRoll";
-import { PreviewRoll } from "./components/PreviewRoll";
+import { OngoinPoll } from "./components/OngoingPoll";
+import { PreviewPoll } from "./components/PreviewPoll";
 import defaultData from "./database.json";
 import { Poll } from "./PollType";
 
@@ -33,7 +33,7 @@ function App() {
       <div id="preview-root">
         {data.map((poll, index) =>
           selectedPoll.id === poll.id ? null : (
-            <PreviewRoll
+            <PreviewPoll
               key={index}
               poll={poll}
               toOngoingPollFn={setSelectedPoll}
